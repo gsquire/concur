@@ -10,7 +10,7 @@ use docopt::Docopt;
 
 const USAGE: &'static str = "
 Usage:
-    concur [options] <num-times> <binary> <binary-args>...
+    concur [options] <num-times> <binary> [--] [<binary-args>...]
     concur (-h | --help)
 
 Options:

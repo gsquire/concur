@@ -1,6 +1,6 @@
 [package]
 name = "concur"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Garrett Squire <garrettsquire@gmail.com>"]
 description = "A parallel repeat function for running shell commands"
 repository = "https://github.com/gsquire/concur"

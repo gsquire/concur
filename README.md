@@ -20,11 +20,17 @@ You can run it with or without threads as such:
 
 ```sh
 # Run a command synchronously.
-cargo run --release -- 10 curl https://www.rust-lang.org
+concur 10 curl https://www.rust-lang.org
 
 # Run it with threads.
-cargo run --release -- 10 curl https://www.rust-lang.org -j 2
+concur 10 curl https://www.rust-lang.org -j 2
+
+# Run a command with it's own arguments.
+concur 5 ls -- -a
 ```
+
+When running a command with it's own arguments, specifying two dashes before listing them allows them to be
+ignored by your program's options.
 
 ### License
 MIT
