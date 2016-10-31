@@ -9,8 +9,6 @@ If you have Rust installed, just run:
 cargo build --release
 ```
 
-If there is interest, I will publish it to https://crates.io as well.
-
 ### Usage
 You can run it with or without threads as such:
 

@@ -3,7 +3,7 @@ name = "concur"
 version = "0.1.0"
 authors = ["Garrett Squire <garrettsquire@gmail.com>"]
 description = "A parallel repeat function for running shell commands"
-respository = "https://github.com/gsquire/concur"
+repository = "https://github.com/gsquire/concur"
 keywords = ["parallel", "shell"]
 license = "MIT"
 
