@@ -9,6 +9,12 @@ If you have Rust installed, just run:
 cargo build --release
 ```
 
+You can also install it with cargo making it available as a binary:
+
+```sh
+cargo install concur
+```
+
 ### Usage
 You can run it with or without threads as such:
 
