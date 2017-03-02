@@ -31,8 +31,8 @@ fn divide_work(num_threads: i32, num_repeat: i32) -> (i32, i32) {
     ((num_repeat / num_threads), (num_repeat % num_threads))
 }
 
-fn print_out(data: Vec<u8>) {
-    print!("{}", String::from_utf8(data).expect("invalid UTF-8"));
+fn print_out(data: &[u8]) {
+    print!("{}", String::from_utf8_lossy(data));
 }
 
 fn run_command(args: &Args) -> Vec<u8> {
@@ -70,12 +70,12 @@ fn repeat(args: &Args) {
 
         // Perform the remainder in the main thread.
         for _ in 0..r {
-            print_out(run_command(args));
+            print_out(&run_command(args));
         }
 
         // Print the output from the threads.
         for _ in 0..num_threads * w {
-            print_out(rx.recv().unwrap());
+            print_out(&rx.recv().unwrap());
         }
 
         // The processing is done.
@@ -84,7 +84,7 @@ fn repeat(args: &Args) {
 
     // The synchronous path.
     for _ in 0..args.arg_num_times {
-        print_out(run_command(args));
+        print_out(&run_command(args));
     }
 }
 
